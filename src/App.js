@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-// import Item from './Item';
 import { InputGroup, Button, FormControl } from 'react-bootstrap';
 import { ic_delete_forever } from 'react-icons-kit/md/';
 import { Icon } from 'react-icons-kit';
