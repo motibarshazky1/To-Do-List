@@ -41,7 +41,7 @@ class App extends React.Component {
     };
     onAddItemClick = () => {
         var task = { name: this.state.input, isFinished: false };
-        if (!task) {
+        if (!task.name) {
             this.setState({
                 error: 'Please Enter Valid Name!',
             });
