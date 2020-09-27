@@ -1,0 +1,98 @@
+.header {
+    margin-top: 35px;
+    font-size: 60px;
+    font-family: 'Questrial', sans-serif;
+    text-align: center;
+}
+.error {
+    font-size: 20px;
+    font-family: 'Questrial', sans-serif;
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+}
+.input {
+    margin-top: 30px;
+    margin-left: 200px;
+    margin-right: 235px;
+}
+.text-input {
+    border-width: 1px;
+    border-color: #30c23c;
+}
+.text-input:focus {
+    border-color: #30c23c;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(25, 248, 43, 0.6);
+}
+.text-input:focus::placeholder {
+    color: transparent;
+}
+.items {
+    margin-top: 30px;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+.item {
+    font-size: 30px;
+    font-family: 'Questrial', sans-serif;
+    margin: 5px;
+    margin-bottom: 10px;
+    display: flex;
+}
+.item-finished {
+    font-size: 30px;
+    font-family: 'Questrial', sans-serif;
+    margin: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    text-decoration: line-through;
+    text-decoration-color: red;
+}
+.finished-item-name {
+    display: flex;
+    flex: 6.3;
+    color: red;
+}
+.item-name {
+    display: flex;
+    flex: 6.3;
+}
+.item-icons {
+    display: flex;
+    flex: 1;
+}
+.finish-icon {
+    cursor: pointer;
+    margin-top: -1px;
+    margin-right: 8px;
+}
+.edit-icon {
+    cursor: pointer;
+}
+.delete-icon {
+    margin-top: -1px;
+    cursor: pointer;
+}
+.clear {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.edit {
+    margin-left: 200px;
+    margin-right: 235px;
+}
+.edit-hide {
+    visibility: hidden;
+}
+.edit-input {
+    border-width: 1px;
+    border-color: #fdd700;
+}
+.edit-input:focus {
+    border-color: #fdd700;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgb(255, 187, 0);
+}
+.edit-input:focus::placeholder {
+    color: transparent;
+}
