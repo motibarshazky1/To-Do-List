@@ -19,7 +19,6 @@ class App extends React.Component {
         this.setState({
             input: e.target.value,
         });
-        console.log(this.state.list);
     };
     updateEditInputValue = (e) => {
         this.setState({
@@ -76,7 +75,7 @@ class App extends React.Component {
         var listCopy = [...this.state.list]; // make a separate copy of the array
         if (i !== -1) {
             listCopy.splice(i, 1); //at position i, remove 1 item
-            this.setState({ list: listCopy });
+            this.setState({ list: listCopy, isEditing: false });
         }
     };
 
