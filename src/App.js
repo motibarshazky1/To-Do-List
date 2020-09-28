@@ -11,7 +11,7 @@ class App extends React.Component {
         list: [],
         input: '',
         error: '',
-        edit: '',
+        editInput: '',
         isEditing: false,
     };
 
@@ -23,7 +23,7 @@ class App extends React.Component {
     };
     updateEditInputValue = (e) => {
         this.setState({
-            edit: e.target.value,
+            editInput: e.target.value,
         });
     };
 
@@ -67,9 +67,9 @@ class App extends React.Component {
     onEditItemClick = (i) => {
         this.setState({ isEditing: true });
         let listCopy = [...this.state.list];
-        let item = '';
-        listCopy[i].name = item;
-        this.setState({ list: listCopy });
+        let item = this.state.list[i].name;
+        listCopy[i].name = '';
+        this.setState({ list: listCopy, editInput: item });
     };
 
     onDeleteItemClick = (i) => {
@@ -92,8 +92,8 @@ class App extends React.Component {
             }
         }
         let listCopy = [...this.state.list];
-        listCopy[index].name = this.state.edit;
-        this.setState({ list: listCopy, edit: '', isEditing: false });
+        listCopy[index].name = this.state.editInput;
+        this.setState({ list: listCopy, editInput: '', isEditing: false });
     };
 
     render() {
@@ -155,7 +155,7 @@ class App extends React.Component {
                         <FormControl
                             className="edit-input"
                             onChange={this.updateEditInputValue}
-                            value={this.state.edit}
+                            value={this.state.editInput}
                             placeholder="Edit your task:"
                             aria-label="Edit your task:"
                             aria-describedby="basic-addon2"
